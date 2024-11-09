@@ -1,5 +1,13 @@
 Para testear la primer pre entrega:
 
+Para ejecutar:
+
+Colocar en la terminal node src/app.js
+
+
+
+Para verificar funcionamiento: 
+
 POSTMAN: 
 
 Para generar mascotas simuladas:
