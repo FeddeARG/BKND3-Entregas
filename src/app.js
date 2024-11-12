@@ -8,11 +8,22 @@ import petsRouter from './routes/pets.router.js';
 import adoptionsRouter from './routes/adoption.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 import mocksRouter from './routes/mocks.router.js';
+import cors from 'cors';
+import connectDB from "./config/database.js";
+
 
 const app = express();
 const PORT = process.env.PORT||8080;
-mongoose.set('strictQuery', false);
-const connection = mongoose.connect(`mongodb+srv://federicoanaranjo:KK68V0QwuBOSRNZd@clusterch.qyaerdl.mongodb.net/?retryWrites=true&w=majority&appName=ClusterCH`)
+
+connectDB();
+const isProduction = process.env.NODE_ENV === "production";
+
+app.use(
+    cors({
+      origin: isProduction ? "http://localhost:3030" : "http://localhost:8080",
+      credentials: true,
+    })
+);
 
 app.use(express.json());
 app.use(cookieParser());
