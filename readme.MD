@@ -119,10 +119,10 @@
 
 ### **Postman (Verificar usuarios y mascotas)**
 
-- **Usuarios:**
-
-    ![Imagen mocking 100 pets](./src/public/img/GetPostman10Users.png)
-
 - **Mascotas:**
 
     ![Imagen mocking 100 pets](./src/public/img/GetPostman20Pets.png)
+
+- **Usuarios:**
+
+    ![Imagen mocking 100 pets](./src/public/img/GetPostman10Users.png.png)
