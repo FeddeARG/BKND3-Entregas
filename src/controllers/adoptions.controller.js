@@ -1,6 +1,6 @@
 // src/controllers/adoptions.controller.js
 
-import { adoptionsService, petsService, usersService } from "../services/index.js"
+import { adoptionsService, petsService, usersService } from '../services/index.js'
 
 const getAllAdoptions = async(req,res)=>{
     const result = await adoptionsService.getAll();

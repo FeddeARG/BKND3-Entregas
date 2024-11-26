@@ -1,6 +1,6 @@
 // src/controllers/users.controller.js
 
-import { usersService } from "../services/index.js"
+import { usersService } from '../services/index.js'
 
 const getAllUsers = async(req,res)=>{
     const users = await usersService.getAll();
