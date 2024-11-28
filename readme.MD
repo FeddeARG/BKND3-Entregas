@@ -3,6 +3,15 @@
 
 ## **Entrega Final Backend3:**
 
+# **Imágen DockerHUB**
+
+- URL Imágen Docker: https://hub.docker.com/r/fdnaranjo/recursosbackend-adoptme
+
+    - Clonar imágen: 
+            ```bash
+            docker pull fdnaranjo/recursosbackend-adoptme
+            ```
+  
 ### **Implementaciones (Versión 1.0)**
 
 - Crear un router llamado `mocks.router.js` que funcione bajo la ruta base `/api/mocks`.
