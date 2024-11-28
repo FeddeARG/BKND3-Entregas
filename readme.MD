@@ -8,9 +8,9 @@
 - URL Imágen Docker: https://hub.docker.com/r/fdnaranjo/recursosbackend-adoptme
 
     - Clonar imágen: 
-            ```bash
+            
             docker pull fdnaranjo/recursosbackend-adoptme
-            ```
+            
   
 ### **Implementaciones (Versión 1.0)**
 
