@@ -1,7 +1,9 @@
 
-# Entrega Final Backend3:
+# RecursosBackEnd-Adoptme
 
-## Implementaciones al repository RecursosBackEnd-Adoptme
+## **Entrega Final Backend3:**
+
+### **Implementaciones (Versión 1.0)**
 
 - Crear un router llamado `mocks.router.js` que funcione bajo la ruta base `/api/mocks`.
 
@@ -16,13 +18,23 @@
 
 - Dentro del router `mocks.router.js`, desarrollar un endpoint `POST` llamado `/generateData` que reciba los parámetros numéricos `users` y `pets` para generar e insertar en la base de datos la cantidad de registros indicados.
 
+### **Nuevas Implementaciones (Versión 1.2)**
+
 - Documentar con Swagger los endpoints del módulo `users` (`users.router.js`) para `/api/users`.
 
-- Implementar tests funcionales para todos los endpoints del router `adoption.router.js` con los servicios correspondientes.
+- Implementar tests funcionales para todos los endpoints del router `adoption.router.js`.
+
+- Agregar endpoint `POST /api/users` para crear nuevos usuarios según los requerimientos del modelo:
+  - `first_name` (string, requerido)
+  - `last_name` (string, requerido)
+  - `email` (string, requerido, único)
+  - `password` (string, requerido, encriptado antes de guardarse)
+  - `role` (string, opcional, por defecto `user`)
+  - `pets` (array vacío por defecto)
 
 ---
 
-## Para ejecutar:
+## **Para ejecutar:**
 
 1. Instalar dependencias:
     ```bash
@@ -36,7 +48,7 @@
 
 ---
 
-## Para verificar el funcionamiento:
+## **Para verificar el funcionamiento:**
 
 ### **Postman**
 
@@ -94,11 +106,11 @@
 
 - **10 usuarios creados:**
 
-    ![Imagen mocking 100 pets](./src/public/img/Mongo10Users.png)
+    ![Imagen 10 users creados MongoDB](./src/public/img/Mongo10Users.png)
 
 ---
 
-## Para testing:
+## **Para testing:**
 
 ### **Tests funcionales**
 
@@ -112,17 +124,35 @@
         - `GET /api/adoptions`: Devuelve todas las adopciones.
         - `GET /api/adoptions/{aid}`: Devuelve una adopción específica.
         - `POST /api/adoptions/{uid}/{pid}`: Crea una adopción.
+    - **Router `users.router.js`**:
+        - `POST /api/users`: Crea un nuevo usuario.
 
 ---
 
-## Capturas de pantalla adicionales:
+## **Herramientas Utilizadas:**
+
+- **Node.js**: v16.x
+- **Express**: v4.x
+- **Mongoose**: v6.x
+- **Swagger-UI**: v4.x
+- **Mocha**: v10.x
+- **Chai**: v4.x
+- **Supertest**: v6.x
+- **Bcrypt**: v5.x
+- **dotenv-flow**: v4.x
+- **Postman**: v10.x (para pruebas manuales)
+- **MongoDB Atlas**: Cloud Database
+
+---
+
+## **Capturas de pantalla adicionales:**
 
 ### **Postman (Verificar usuarios y mascotas)**
 
 - **Mascotas:**
 
-    ![Imagen mocking 100 pets](./src/public/img/GetPostman20Pets.png)
+    ![Imagen get 20 pets](./src/public/img/GetPostman20Pets.png)
 
 - **Usuarios:**
 
-    ![Imagen mocking 100 pets](./src/public/img/GetPostman10Users.png.png)
+    ![Imagen get 10 users](./src/public/img/GetPostman10Users.png.png)

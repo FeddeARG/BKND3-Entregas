@@ -6,7 +6,7 @@ import usersController from '../controllers/users.controller.js';
 const router = Router();
 
 router.get('/',usersController.getAllUsers);
-
+router.post('/', usersController.createUser);
 router.get('/:uid',usersController.getUser);
 router.put('/:uid',usersController.updateUser);
 router.delete('/:uid',usersController.deleteUser);
@@ -45,6 +45,51 @@ export default router;
  */
 
 router.get('/', usersController.getAllUsers);
+
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Crear un nuevo usuario
+ *     tags: [Users]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               first_name:
+ *                 type: string
+ *                 description: Nombre del usuario
+ *               last_name:
+ *                 type: string
+ *                 description: Apellido del usuario
+ *               email:
+ *                 type: string
+ *                 description: Correo electrónico único del usuario
+ *               password:
+ *                 type: string
+ *                 description: Contraseña del usuario (será encriptada)
+ *               role:
+ *                 type: string
+ *                 description: Rol del usuario (opcional, por defecto "user")
+ *             example:
+ *               first_name: Juan
+ *               last_name: Pérez
+ *               email: juan.perez@example.com
+ *               password: coder123
+ *               role: admin
+ *     responses:
+ *       201:
+ *         description: Usuario creado exitosamente
+ *       400:
+ *         description: Error en los datos ingresados o usuario ya existente
+ *       500:
+ *         description: Error interno del servidor
+ */
+
+router.post('/', usersController.createUser);
 
 /**
  * @swagger
